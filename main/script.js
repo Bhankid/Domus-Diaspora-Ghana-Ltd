@@ -28,7 +28,7 @@ document.addEventListener("click", function (event) {
   }
 });
 
-// Card swipper
+// Card swiper
 const stack = document.querySelector(".stack");
 const cards = Array.from(stack.children)
   .reverse()
