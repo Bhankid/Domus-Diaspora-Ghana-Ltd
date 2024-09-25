@@ -618,8 +618,8 @@ main {
     line-height: 100px;
     text-align: center;
     font-family: "Open Sans", sans-serif;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px);
     background-color: hsla(277, 27%, 58%, 0.6);
     z-index: -999;
     transition: all 1s ease-in-out;
