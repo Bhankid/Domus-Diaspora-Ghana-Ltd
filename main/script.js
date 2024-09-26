@@ -61,3 +61,20 @@ stack.addEventListener("click", function (e) {
     }, 1200);
   }
 });
+
+
+// Swiper
+const swiper = new Swiper(".swiper", {
+  grabCursor: true,
+  spaceBetween: 30,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+    },
+  },
+});
+
