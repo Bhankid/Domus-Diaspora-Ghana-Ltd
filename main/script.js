@@ -66,7 +66,7 @@ stack.addEventListener("click", function (e) {
 // Swiper
 const swiper = new Swiper(".swiper", {
   grabCursor: true,
-  spaceBetween: 30,
+  spaceBetween: 20,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
