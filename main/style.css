@@ -4,8 +4,15 @@
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
   scroll-behavior: smooth;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
 body {
   padding: 0;
   margin: 0;
@@ -289,24 +296,33 @@ main {
 .hero-card {
   display: flex;
   flex-direction: row;
+  width: 100%;
+  max-width: 100%;
   align-items: center;
-  padding: 15px;
-  /* border: 1px solid #313030; */
+  padding: 10px;
   color: var(--color-white);
-  /* border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+  box-sizing: border-box;
 }
 
 .hero-card .card-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
+  max-width: 100%;
 }
 
 .hero-card .image-container {
   width: 50%;
   height: 100%;
   margin-right: 20px;
+  max-width: 100%;
+}
+
+.hero-card .image-container .accomodate {
+  margin-right: 0;
+  padding-right: 0;
+  max-width: 100%;
 }
 
 .hero-card .image-container img {
@@ -314,12 +330,14 @@ main {
   height: 100%;
   object-fit: cover;
   border-radius: 8px;
+  max-width: 100%;
 }
 
 .hero-card .text-container {
   width: 50%;
   height: 100%;
-  margin-left: 20px;
+  margin-left: 15px;
+  max-width: 100%;
 }
 
 .hero-card .text-container h2 {
@@ -329,7 +347,7 @@ main {
 }
 
 .hero-card .text-container p {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   color: var(--color-white);
   margin-bottom: 20px;
 }
@@ -355,7 +373,14 @@ main {
 }
 .hero-card[data-category="accommodation"] .card-content {
   flex-direction: row-reverse;
-  background-color: rgb(180, 180, 180);
+  background-color: rgb(205, 205, 205);
+  margin-right: 0;
+  padding-right: 0;
+  max-width: 100%;
+}
+
+.hero-card[data-category="accommodation"] .image-container img {
+  float: right;
 }
 
 /* Reverse the order of image and text for the third card */
@@ -367,14 +392,14 @@ main {
 /* Partners */
 .partners {
   background-color: #f7f7f7;
-  padding: 40px 0;
+  padding: 20px 0;
   display: flex;
   justify-content: center;
 }
 
 .partner-heading {
   font-family: cursive;
-  font-size: clamp(1.5rem, 4vw, 6rem);
+  font-size: clamp(1.4rem, 4vw, 6rem);
   font-weight: 700;
   background: -webkit-linear-gradient(
     0deg,
@@ -390,7 +415,7 @@ main {
 .partners-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 40px;
   overflow: hidden;
   white-space: nowrap;
   display: flex;
@@ -404,13 +429,13 @@ main {
 }
 
 .partner-icon {
-  font-size: 36px;
+  font-size: 30px;
   color: #337ab7;
-  margin: 20px;
+  margin: 15px;
 }
 
 .partner-icon:hover {
-  color: #23527c;
+  color: var(--primary-color);
 }
 
 /* Add animation to move the icons from right to left */
@@ -597,6 +622,38 @@ main {
 .page .swiper-pagination {
   position: relative;
   margin-top: 50px;
+}
+
+
+.footer {
+  background-color: var(--secondary-color);
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-left, .footer-right {
+  flex: 1;
+}
+
+.footer-left {
+  text-align: left;
+}
+
+.footer-right {
+  text-align: right;
+}
+
+.footer p {
+  margin-bottom: 0;
 }
 
 /* Media queries for keyframes */
@@ -912,14 +969,14 @@ main {
     max-width: 1400px;
   }
   .partner-slide {
-    margin: 20px;
+    margin: 15px;
   }
   .partner-icon {
     font-size: 40px;
-    margin: 30px;
+    margin: 20px;
   }
   .partner-icon img {
-    width: 95px;
+    width: 35px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
@@ -935,7 +992,7 @@ main {
   }
   .partner-icon {
     font-size: 32px;
-    margin: 25px;
+    margin: 20px;
   }
   .partner-icon img {
     width: 95px;
@@ -954,7 +1011,7 @@ main {
   }
   .partner-icon {
     font-size: 22px;
-    margin: 20px;
+    margin: 15px;
   }
 
   .partner-icon img {
@@ -970,7 +1027,7 @@ main {
     max-width: 400px;
   }
   .partner-slide {
-    margin: 5px;
+    margin: 10px;
   }
   .partner-icon {
     font-size: 18px;
